@@ -1,0 +1,1165 @@
+<!doctype html>
+
+<html lang="th"><head><base target="_top"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+
+:root{--navy:#112c43;--teal:#087f83;--ink:#173248;--muted:#6b7e8f;--line:#dce5eb;--bg:#f3f6f9}*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:wait;opacity:.55}.layout{display:grid;grid-template-columns:222px 1fr;min-height:100vh}aside{background:var(--navy);color:#fff;padding:28px 18px;display:flex;flex-direction:column}.brand{display:flex;gap:12px;align-items:center;margin:0 10px 35px}.logo{background:#27b3ad;color:#092e41;padding:11px 9px;border-radius:12px;font-size:21px;font-weight:bold}.brand strong{font-size:19px;display:block}.brand small{font-size:10px;letter-spacing:2px;color:#a7bfcd}.nav-label{color:#89a4b7;font-size:11px;margin:0 14px 12px}nav button{display:flex;align-items:center;gap:10px;width:100%;border:0;color:#c3d2de;background:transparent;border-radius:9px;padding:14px 12px;margin:5px 0;text-align:left}nav button.active{color:#fff;background:#245064;border-left:3px solid #31c0b4}nav button span:first-child{font-size:19px;width:23px}.aside-bottom{margin-top:auto;padding:30px 12px 0;color:#9eb7c8;font-size:12px;line-height:1.9}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#57d5ab;margin-right:5px}main{min-width:0}header{background:white;border-bottom:1px solid var(--line);padding:18px 34px;display:flex;justify-content:space-between;align-items:center}header small{color:var(--muted)}.pill{border:1px solid var(--line);border-radius:30px;padding:7px 12px;font-size:11px}.content{max-width:1180px;margin:auto;padding:28px 34px}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--teal);font-weight:bold}h1{font-size:27px;margin:10px 0}p{line-height:1.75;color:var(--muted);margin:6px 0 20px}.heading{display:flex;justify-content:space-between;align-items:center;gap:12px}.secondary{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;color:var(--ink)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;justify-content:space-between;align-items:center}.stat small{display:block;color:var(--muted);font-size:12px}.stat strong{display:block;font-size:25px;margin-top:8px}.stat .symbol{background:#e8f5f3;padding:12px;border-radius:12px;color:var(--teal);font-size:20px}.card{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 5px 18px #14364c04}.card-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}.card-head h2{font-size:17px;margin:0}.card-head small{color:var(--muted);display:block;margin-top:6px}.step{background:#e7f4f3;color:var(--teal);border-radius:9px;padding:11px;font-weight:bold}.form-body{padding:22px 24px}.section{font-size:12px;color:var(--teal);margin:0 0 17px;padding-top:6px;font-weight:bold}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;font-size:12px;font-weight:bold;margin-bottom:8px}label b{color:#c15740}input,select,textarea{width:100%;border:1px solid #cfdce4;background:#fff;color:var(--ink);padding:11px 12px;border-radius:8px;min-height:43px}input:focus,select:focus,textarea:focus{outline:3px solid #c9efec;border-color:var(--teal)}textarea{resize:vertical;min-height:95px}input::placeholder,textarea::placeholder{color:#9ba9b5}select:disabled{background:#f4f7f9;color:#8b9ca8}.hint{display:block;font-size:11px;color:var(--muted);margin:7px 0;line-height:1.7}.divider{border:0;border-top:1px solid #edf1f4;margin:23px 0}.team{display:flex;flex-wrap:wrap;gap:9px}.team label{margin:0;display:flex;gap:8px;align-items:center;padding:9px 12px;border:1px solid var(--line);border-radius:8px;font-size:12px;font-weight:normal}.team input{width:16px;min-height:16px;accent-color:var(--teal)}.team label:has(input:checked){background:#e9f6f3;border-color:#7fc8bd}.actions{padding:17px 24px;border-top:1px solid var(--line);background:#fbfcfd;display:flex;justify-content:space-between;align-items:center;gap:12px}.primary{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:12px 24px;font-weight:bold}.actions small{color:var(--muted);font-size:11px}.actions .buttons{display:flex;gap:10px}.notice{margin:15px 0;padding:13px 16px;border-radius:8px;background:#e8f5f0;color:#16684c;line-height:1.7;overflow-wrap:anywhere}.notice.error{background:#fff0eb;color:#a33b26}.notice.info{background:#e8f0fb;color:#315d8c}.notice:empty{display:none}.recent{margin-top:26px}.recent h2{font-size:16px}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:white}table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;color:var(--muted);background:#f9fbfc;padding:13px 16px;font-weight:normal}td{padding:14px 16px;border-top:1px solid #eef2f5;max-width:330px;overflow-wrap:anywhere}.badge{white-space:nowrap;background:#e6f4ee;color:#207655;padding:5px 8px;border-radius:20px;font-size:10px}.badge.progress{background:#fff4db;color:#9b7318}.footer{font-size:10px;text-align:center;color:#91a1af;padding:22px}.hidden{display:none!important}fieldset{border:0;padding:0;margin:0;min-width:0}legend{font-size:12px;font-weight:bold;margin-bottom:10px}.loading{opacity:.5;pointer-events:none}#preview{margin:0;border-radius:0;text-align:center} @media(max-width:850px){.layout{grid-template-columns:175px 1fr}.content{padding:22px 20px}header{padding:16px 20px}.brand{margin-left:0}.brand strong{font-size:16px}.stats{gap:8px}.stat{padding:13px}.stat .symbol{display:none}.actions{flex-wrap:wrap}}@media(max-width:620px){.layout{display:block}aside{padding:16px}.brand{margin:0 0 12px}.aside-bottom,.nav-label{display:none}nav{display:flex;gap:5px}nav button{padding:10px 6px;font-size:11px;justify-content:center}nav button span:first-child{display:none}header{padding:13px 18px}header .pill{display:none}.content{padding:20px 14px}h1{font-size:22px}.heading{align-items:flex-start}.stats{margin:17px 0}.stat strong{font-size:21px}.stat small{font-size:10px}.grid{grid-template-columns:1fr}.card-head,.form-body{padding:18px}.field.full{grid-column:auto}.actions{padding:16px}.actions .buttons{width:100%}.primary{flex:1}.heading .secondary{font-size:11px;white-space:nowrap}}
+
+
+/* ส่วนแสดงทีมงาน: ใช้ details/summary เพื่อเปิดด้วยเมาส์หรือแป้นพิมพ์ได้ */
+
+.report-team { min-width: 0; }
+
+.report-work-title { display: block; color: var(--teal); margin-bottom: 8px; font-size: 14px; }
+
+.report-reference { font-family: monospace; overflow-wrap: anywhere; color: var(--muted); }
+
+.data-gap { color: #9b7318; }
+
+#table-body td { vertical-align: top; }
+
+/* กำหนดความกว้างครบทุกคอลัมน์ ไม่ปล่อยให้คอลัมน์ลูกค้ารับพื้นที่ที่เหลือ */
+
+#record-table.report-table { table-layout: fixed; min-width: 1120px; width: 100%; }
+
+#record-table.report-table th:nth-child(1) { width: 120px; }
+
+#record-table.report-table th:nth-child(2) { width: 210px; }
+
+#record-table.report-table th:nth-child(3) { width: 270px; }
+
+#record-table.report-table th:nth-child(4) { width: 100px; }
+
+#record-table.report-table th:nth-child(5) { width: 190px; }
+
+#record-table.report-table th:nth-child(6) { width: 230px; }
+
+#record-table.report-table th { font-weight: bold; color: var(--ink); white-space: nowrap; padding: 14px; }
+
+#record-table.report-table td { min-width: 0; max-width: none; padding: 16px 14px; line-height: 1.75; word-break: normal; overflow-wrap: break-word; }
+
+#record-table.report-table td:nth-child(6) { white-space: pre-wrap; }
+
+#record-table.report-table .hint { margin: 5px 0; }
+
+#record-table.report-table .report-work-title { font-size: 13px; margin-bottom: 5px; }
+
+#record-table.report-table .report-details summary { font-size: 11px; }
+
+#record-table.report-table .report-detail-body { padding: 10px; }
+
+#record-table.report-table tbody tr:hover { background: #f7fbfc; }
+
+.report-date { display: block; white-space: nowrap; }
+
+.report-time { display: block; color: var(--muted); font-size: 11px; white-space: nowrap; }
+
+.table-wrap { scrollbar-gutter: stable; }
+
+.table-wrap:focus-visible { outline: 3px solid #7fc8bd; outline-offset: 3px; }
+
+.table-scroll-hint { margin-top: 10px; font-size: 11px; color: var(--muted); }
+
+.report-team-names { margin-top: 7px; line-height: 1.8; }
+
+.report-details { margin-top: 10px; }
+
+.report-details summary { cursor: pointer; color: var(--teal); line-height: 1.8; }
+
+.report-details summary:focus-visible { outline: 3px solid #7fc8bd; outline-offset: 3px; }
+
+.report-detail-body { margin-top: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: #f9fbfc; }
+
+.report-detail-body h3 { font-size: 12px; margin: 18px 0 8px; color: var(--teal); }
+
+.report-detail-body h3:first-child { margin-top: 0; }
+
+.report-employee-list { list-style: none; margin: 0; padding: 0; }
+
+.report-employee-list li + li { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }
+
+.report-work-text { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.8; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+
+.report-filters { padding: 20px; margin: 16px 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+
+.filter-heading { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; margin-bottom: 18px; }
+
+.filter-heading strong { color: var(--teal); }
+
+.filter-heading span { font-size: 12px; color: var(--muted); }
+
+.filter-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) auto; gap: 16px; align-items: end; }
+
+.filter-grid button { min-height: 43px; }
+
+.filter-result { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; font-size: 13px; line-height: 1.8; color: var(--teal); }
+
+@media(max-width:620px) { .filter-grid { grid-template-columns: 1fr; gap: 12px; } .report-filters { padding: 16px; } }
+
+
+/* ตารางทะเบียนลูกค้าแยกสัดส่วนจากตารางรายงาน เพื่อไม่บีบชื่อและที่อยู่ */
+
+#record-table.customer-table { table-layout: fixed; min-width: 1260px; width: 100%; }
+
+#record-table.customer-table th { padding: 14px; font-weight: bold; white-space: nowrap; color: var(--ink); }
+
+#record-table.customer-table th:nth-child(1) { width: 250px; }
+
+#record-table.customer-table th:nth-child(2) { width: 120px; }
+
+#record-table.customer-table th:nth-child(3) { width: 140px; }
+
+#record-table.customer-table th:nth-child(4) { width: 130px; }
+
+#record-table.customer-table th:nth-child(5) { width: 220px; }
+
+#record-table.customer-table th:nth-child(6) { width: 100px; }
+
+#record-table.customer-table th:nth-child(7) { width: 100px; }
+
+#record-table.customer-table th:nth-child(8) { width: 200px; }
+
+#record-table.customer-table td { padding: 16px 14px; line-height: 1.75; max-width: none; overflow-wrap: break-word; }
+
+@media(max-width:620px) { nav { flex-wrap: wrap; } nav button { flex: 1 1 30%; width: auto; } }
+
+
+.contact-filter-grid { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: end; }
+
+.contact-filter-grid button { min-height: 43px; }
+
+#record-table.contact-table { table-layout: fixed; min-width: 1000px; width: 100%; }
+
+#record-table.contact-table th { padding: 14px; font-weight: bold; color: var(--ink); }
+
+#record-table.contact-table th:nth-child(1) { width: 210px; }
+
+#record-table.contact-table th:nth-child(2) { width: 270px; }
+
+#record-table.contact-table th:nth-child(3) { width: 190px; }
+
+#record-table.contact-table th:nth-child(4) { width: 140px; }
+
+#record-table.contact-table th:nth-child(5) { width: 230px; }
+
+#record-table.contact-table td { padding: 16px 14px; line-height: 1.75; max-width: none; }
+
+@media(max-width:620px) { .contact-filter-grid { grid-template-columns: 1fr; } }
+
+
+/* ตารางยืดตามพื้นที่จริง; จอแคบเปลี่ยนเป็นรายการโดยคงข้อมูลทุกช่อง */
+
+.content { max-width: 1600px; }
+
+.table-wrap { container-type: inline-size; width: 100%; max-width: 100%; scrollbar-gutter: auto; }
+
+#record-table.report-table, #record-table.customer-table, #record-table.contact-table { width: 100%; min-width: 0; table-layout: fixed; }
+
+#record-table th, #record-table td { white-space: normal !important; overflow-wrap: anywhere !important; word-break: normal; min-width: 0; }
+
+#record-table.report-table th:nth-child(1) { width: 12%; }
+
+#record-table.report-table th:nth-child(2) { width: 20%; }
+
+#record-table.report-table th:nth-child(3) { width: 25%; }
+
+#record-table.report-table th:nth-child(4) { width: 11%; }
+
+#record-table.report-table th:nth-child(5) { width: 17%; }
+
+#record-table.report-table th:nth-child(6) { width: 15%; }
+
+#record-table.customer-table th:nth-child(1) { width: 23%; }
+
+#record-table.customer-table th:nth-child(2) { width: 10%; }
+
+#record-table.customer-table th:nth-child(3) { width: 12%; }
+
+#record-table.customer-table th:nth-child(4) { width: 11%; }
+
+#record-table.customer-table th:nth-child(5) { width: 18%; }
+
+#record-table.customer-table th:nth-child(6) { width: 7%; }
+
+#record-table.customer-table th:nth-child(7) { width: 7%; }
+
+#record-table.customer-table th:nth-child(8) { width: 12%; }
+
+#record-table.contact-table th:nth-child(1) { width: 21%; }
+
+#record-table.contact-table th:nth-child(2) { width: 27%; }
+
+#record-table.contact-table th:nth-child(3) { width: 18%; }
+
+#record-table.contact-table th:nth-child(4) { width: 14%; }
+
+#record-table.contact-table th:nth-child(5) { width: 20%; }
+
+#record-table .report-date, #record-table .report-time, #record-table .badge { white-space: normal; }
+
+#record-table .report-work-text { overflow-wrap: anywhere; }
+
+@container (max-width: 850px) {
+
+  #record-table, #record-table tbody, #record-table tr { display: block; width: 100%; }
+
+  #record-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+  #record-table tbody tr { padding: 12px 16px; border-bottom: 2px solid var(--line); }
+
+  #record-table tbody tr:last-child { border-bottom: 0; }
+
+  #record-table tbody td { display: grid; grid-template-columns: 125px minmax(0,1fr); gap: 4px 12px; padding: 10px 0; border: 0; max-width: none; width: 100%; }
+
+  #record-table tbody td::before { content: attr(data-label); color: var(--muted); font-weight: bold; grid-column: 1; grid-row: 1 / span 10; }
+
+  #record-table tbody td > * { grid-column: 2; min-width: 0; }
+
+  #record-table tbody td[colspan] { display: block; }
+
+  #record-table tbody td[colspan]::before { content: none; }
+
+}
+
+@container (max-width: 420px) {
+
+  #record-table tbody td { grid-template-columns: minmax(0,1fr); }
+
+  #record-table tbody td::before { grid-column: 1; grid-row: auto; }
+
+  #record-table tbody td > * { grid-column: 1; }
+
+}
+
+
+/* Responsive layout: ห่อเนื้อหาแต่ละช่องเป็นก้อนเดียว ป้องกันข้อความหลุดคอลัมน์ */
+
+.cell-content { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+
+.mobile-menu-toggle { display: none; }
+
+@container (max-width: 850px) {
+
+  #record-table tbody td { grid-template-columns: 120px minmax(0,1fr); }
+
+  #record-table tbody td::before { grid-row: 1; }
+
+  #record-table tbody td > .cell-content { grid-column: 2; }
+
+}
+
+@container (max-width: 520px) {
+
+  #record-table tbody tr { padding: 14px; }
+
+  #record-table tbody td { display: block; padding: 9px 0; }
+
+  #record-table tbody td::before { display: block; margin-bottom: 4px; font-size: 11px; }
+
+  #record-table tbody td > .cell-content { display: block; width: 100%; font-size: 14px; line-height: 1.7; }
+
+}
+
+@media(max-width:900px) {
+
+  .layout { display: block; }
+
+  aside { display: grid; grid-template-columns: minmax(0,1fr) auto; padding: 14px 16px; gap: 12px; }
+
+  .brand { margin: 0; gap: 10px; }
+
+  .brand strong { font-size: 18px; }
+
+  .brand small { font-size: 9px; }
+
+  .logo { padding: 8px; font-size: 19px; }
+
+  .aside-bottom, .nav-label { display: none; }
+
+  .mobile-menu-toggle { display: block; align-self: center; min-height: 44px; padding: 8px 14px; border: 1px solid #648094; border-radius: 8px; color: white; background: #245064; }
+
+  aside nav { display: none; grid-column: 1/-1; }
+
+  aside.menu-open nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; }
+
+  aside nav button { width: 100%; min-width: 0; min-height: 48px; margin: 0; padding: 10px; justify-content: flex-start; font-size: 12px; line-height: 1.5; }
+
+  aside nav button span:first-child { display: none; }
+
+  header { padding: 12px 16px; }
+
+  header .pill { display: none; }
+
+  .content { width: 100%; padding: 20px 16px; }
+
+  .heading { flex-wrap: wrap; align-items: flex-start; }
+
+  .heading > div { min-width: 0; }
+
+  .heading h1 { font-size: 23px; overflow-wrap: anywhere; }
+
+  .heading p { font-size: 13px; margin-bottom: 6px; }
+
+  .heading .secondary { min-height: 44px; }
+
+  #record-table { min-width: 0 !important; }
+
+  .table-wrap { border: 0; background: transparent; overflow: visible; }
+
+  #record-table, #record-table tbody, #record-table tr { display: block; width: 100%; }
+
+  #record-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+  #record-table tbody tr { background: white; margin-bottom: 14px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; }
+
+  #record-table tbody td { display: block; width: 100%; max-width: none; padding: 9px 0; border: 0; }
+
+  #record-table tbody td + td { border-top: 1px solid #edf1f4; }
+
+  #record-table tbody td::before { display: block; content: attr(data-label); color: var(--muted); font-size: 11px; font-weight: bold; margin-bottom: 4px; }
+
+  #record-table tbody td[colspan]::before { display: none; }
+
+  #record-table .cell-content { font-size: 14px; line-height: 1.7; }
+
+  #record-table .hint { font-size: 12px; }
+
+  #record-table .report-details summary { font-size: 13px; padding: 10px 0; }
+
+  .filter-grid, .contact-filter-grid, .grid { grid-template-columns: minmax(0,1fr); }
+
+  .field.full { grid-column: auto; }
+
+  input, select, textarea { font-size: 16px; min-height: 46px; }
+
+  textarea { min-height: 120px; }
+
+  .team label { min-height: 44px; }
+
+  .actions { flex-wrap: wrap; padding: 16px; }
+
+  .actions .buttons { display: flex; flex-wrap: wrap; width: 100%; }
+
+  .actions .buttons button { flex: 1; min-height: 46px; }
+
+  .card-head, .form-body { padding: 16px; }
+
+  .report-filters { padding: 16px; }
+
+  #preview { font-size: 11px; padding: 8px 12px; }
+
+}
+
+.edit-record { display: block; margin-top: 12px; min-height: 44px; color: var(--teal); border-color: #9ccfca; }
+
+</style></head><body>
+
+<div id="preview" class="notice info hidden">หน้าตัวอย่าง · ข้อมูลจำลอง · ไม่บันทึกลง Google Sheets</div>
+
+<div class="layout"><aside><div class="brand"><div class="logo">GD</div><div><strong>GD Record</strong><small>FIELD OPERATIONS</small></div></div><div class="nav-label">พื้นที่ทำงาน</div><button type="button" id="mobile-menu-toggle" class="mobile-menu-toggle" aria-controls="main-nav" aria-expanded="false">☰ เมนู</button><nav id="main-nav" aria-label="เมนูหลัก"><button type="button" data-kind="reports_view" class="active"><span>▤</span><span>รายงานการปฏิบัติงาน</span></button><button type="button" data-kind="plans_view"><span>▣</span><span>แผนการปฏิบัติงาน</span></button><button type="button" data-kind="reports_add"><span>＋</span><span>เพิ่มรายงาน</span></button><button type="button" data-kind="customer_view"><span>▦</span><span>ข้อมูลลูกค้า</span></button><button type="button" data-kind="customer"><span>＋</span><span>เพิ่มข้อมูลลูกค้า</span></button><button type="button" data-kind="contacts_view"><span>♙</span><span>ผู้ติดต่อลูกค้า</span></button><button type="button" data-kind="customer_contact"><span>＋</span><span>เพิ่มข้อมูลผู้ติดต่อลูกค้า</span></button></nav><div class="aside-bottom"><span class="dot"></span> เชื่อมต่อ Google Sheets<br>สำเนาของ Record Data GD<br><small>เวลาบันทึก: ประเทศไทย (UTC+7)</small></div></aside>
+
+<main><header><div><strong>บันทึกงานภาคสนาม</strong><br><small>ลูกค้า · ผู้ติดต่อ · ทีมปฏิบัติงาน</small></div><span class="pill">GD ENGINEERING</span></header><div class="content"><div class="heading"><div><span class="eyebrow">WORKSPACE / <span id="section-en">REPORTS</span></span><h1 id="title">เพิ่มรายงานการปฏิบัติงาน</h1><p id="subtitle">บันทึกงานให้ครบ เชื่อมข้อมูลลูกค้าและทีมงานในที่เดียว</p></div><button type="button" class="secondary" id="refresh">↻ โหลดข้อมูลใหม่</button></div>
+
+<div id="message" role="status" aria-live="polite" class="notice info">กำลังโหลดข้อมูล…</div>
+
+<form id="record-form" class="card"><fieldset id="fields" disabled><div class="card-head"><span class="step" id="form-icon">01</span><div><h2 id="form-title">รายละเอียดการปฏิบัติงาน</h2><small>ช่องที่มี * จำเป็นต้องกรอก · ระบบสร้างรหัสให้อัตโนมัติ</small></div></div><div class="form-body" id="form-body"></div></fieldset><div class="actions"><small>ตรวจสอบข้อมูลก่อนบันทึกทุกครั้ง</small><div class="buttons"><button type="button" class="secondary hidden" id="cancel-edit">ยกเลิกการแก้ไข</button><button type="button" class="secondary" id="reset">ล้างแบบฟอร์ม</button><button type="submit" class="primary" id="save" disabled>บันทึกรายงาน</button></div></div></form>
+
+<section class="recent"><h2 id="recent-title">รายงานที่เพิ่มล่าสุด</h2>
+
+<!-- ตัวกรองเฉพาะหน้ารายงาน: ไม่ส่งค่ากรองไปแก้ข้อมูลต้นทาง -->
+
+<section id="report-filters" class="report-filters hidden" aria-label="กรองรายงานการปฏิบัติงาน">
+
+  <div class="filter-heading"><strong id="report-filter-heading">ค้นหารายงานการปฏิบัติงาน</strong><span>เลือกพนักงานและเดือนได้พร้อมกัน</span></div>
+
+  <div class="filter-grid">
+
+    <div><label for="filter-employee">พนักงานผู้ปฏิบัติงาน</label><select id="filter-employee" aria-describedby="filter-help"><option value="">พนักงานทั้งหมด</option></select></div>
+
+    <div><label for="filter-month">เดือนที่ปฏิบัติงาน</label><select id="filter-month"><option value="">ทุกเดือน</option></select></div>
+
+    <button type="button" class="secondary" id="clear-report-filters">ล้างตัวกรอง</button>
+
+  </div>
+
+  <p id="filter-help" class="hint">กรองตามทีมผู้ปฏิบัติงานและวันที่เข้าปฏิบัติงานของรายงาน</p>
+
+  <div id="filter-result" class="filter-result" role="status" aria-live="polite"></div>
+
+  <div class="table-scroll-hint">แสดงข้อมูลครบทุกช่อง · หน้าจอแคบจะแสดงเป็นรายการพร้อมหัวข้อ</div>
+
+</section>
+
+<section id="contact-filters" class="report-filters hidden" aria-label="กรองผู้ติดต่อตามบริษัทลูกค้า">
+
+  <div class="filter-heading"><strong>ค้นหาผู้ติดต่อลูกค้า</strong></div>
+
+  <div class="contact-filter-grid"><div><label for="filter-contact-customer">บริษัทลูกค้า</label><select id="filter-contact-customer"><option value="">ลูกค้าทั้งหมด</option></select></div><button type="button" class="secondary" id="clear-contact-filter">ล้างตัวกรอง</button></div>
+
+  <div id="contact-filter-result" class="filter-result" role="status" aria-live="polite"></div>
+
+</section>
+
+<div class="table-wrap" tabindex="0" role="region" aria-label="ตารางข้อมูล"><table id="record-table"><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div></section><div class="footer">GD Record · ข้อมูลเป็นระบบ พร้อมสำหรับการทำงานครั้งต่อไป</div></div></main></div>
+
+<script>
+
+'use strict';
+
+const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const statusLabels={PLANNED:'วางแผน',IN_PROGRESS:'กำลังดำเนินการ',COMPLETED:'เสร็จสิ้น',CANCELLED:'ยกเลิก',ACTIVE:'ใช้งาน',INACTIVE:'ไม่ใช้งาน',CUSTOMER:'ลูกค้า',PROSPECT:'ลูกค้ามุ่งหวัง'};
+
+let data=null,kind='reports_view',busy=false,requestToken='',drafts={};
+
+const preview=typeof window.GD_PREVIEW!=='undefined';
+
+const token=()=>{const a=new Uint8Array(16);crypto.getRandomValues(a);return Array.from(a,b=>b.toString(16).padStart(2,'0')).join('');};
+
+const isActive=r=>!r.status||r.status==='ACTIVE';
+
+const empName=e=>e['ชื่อย่อ']||[e['ชื่อ'],e['นามสกุล']].filter(Boolean).join(' ')||e.employee_id;
+
+const option=(v,label)=>'<option value="'+esc(v)+'">'+esc(label)+'</option>';
+
+const opts=(rows,key,label)=>rows.map(r=>option(r[key],label(r))).join('');
+
+const enumOpts=values=>values.map(v=>option(v,statusLabels[v]||v)).join('');
+
+function field(name,label,content,required=false,full=false){return '<div class="field'+(full?' full':'')+'"><label for="f-'+esc(name)+'">'+label+(required?' <b>*</b>':'')+'</label>'+content+'</div>';}
+
+function input(name,label,type='text',required=false,full=false,placeholder=''){return field(name,label,'<input id="f-'+name+'" name="'+name+'" type="'+type+'" '+(required?'required':'')+' maxlength="'+(type==='url'?2000:250)+'" placeholder="'+esc(placeholder)+'">',required,full);}
+
+function select(name,label,options,required=true){return field(name,label,'<select id="f-'+name+'" name="'+name+'" '+(required?'required':'')+'>'+options+'</select>',required);}
+
+function textarea(name,label,required=false){return field(name,label,'<textarea id="f-'+name+'" name="'+name+'" '+(required?'required':'')+' maxlength="'+(name==='job_detail'?10000:2000)+'" placeholder="'+(name==='job_detail'?'สรุปงานที่ทำ ผลการดำเนินงาน และประเด็นที่ต้องติดตาม':'ข้อมูลเพิ่มเติม (ถ้ามี)')+'"></textarea>',required,true);}
+
+function note(text,error=false){$('message').textContent=text;$('message').className='notice'+(error?' error':'');}
+
+function call(method,...args){return new Promise((resolve,reject)=>{if(preview){if(method==='getBootstrap')return resolve(window.GD_PREVIEW);return resolve({id:'DEMO_ONLY'});}if(!window.google||!google.script){reject(Error('กรุณาเปิดผ่านเมนู GD Record ในชีต หรือ URL ของ Apps Script'));return;}google.script.run.withSuccessHandler(resolve).withFailureHandler(reject)[method](...args);});}
+
+function values(){const v=Object.fromEntries(new FormData($('record-form')));v.employee_ids=Array.from(document.querySelectorAll('[name="employee_ids"]:checked'),el=>el.value);return v;}
+
+function remember(){if(editing){editing.values=values();return;}if(data)drafts[kind]={values:values(),token:requestToken};}
+
+function applyDraft(d){if(!d)return;Object.entries(d.values).forEach(([k,v])=>{const el=$('f-'+k);if(el)el.value=v;});if(kind==='reports_add'){filterContacts(d.values.contact_id);document.querySelectorAll('[name="employee_ids"]').forEach(e=>e.checked=d.values.employee_ids.includes(e.value));}requestToken=d.token;}
+
+
+// ฟอร์มแก้ไขใช้ช่องเดิม แต่ถือ ID และข้อมูลต้นฉบับแยกจากแบบฟอร์มเพิ่มใหม่
+
+let editing=null;
+
+function editButton(type,id){return '<button type="button" class="secondary edit-record" data-edit-kind="'+esc(type)+'" data-edit-id="'+esc(id)+'">แก้ไข</button>';}
+
+function editDate(value,time){
+
+ const s=String(value||'').trim();if(!s)return '';
+
+ const iso=s.match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}))?/);
+
+ const th=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})(?: (\d{1,2}):(\d{2}))?/);
+
+ if(!iso&&!th)return '';
+
+ const m=iso||th;let y=Number(iso?m[1]:m[3]);if(y>=2400)y-=543;
+
+ const date=y+'-'+String(m[2]).padStart(2,'0')+'-'+String(iso?m[3]:m[1]).padStart(2,'0');
+
+ return date+(time?'T'+String(m[4]||'00').padStart(2,'0')+':'+(m[5]||'00'):'');
+
+}
+
+function startEdit(type,id){
+
+ if(editing){note('กรุณาบันทึกหรือยกเลิกการแก้ไขรายการปัจจุบันก่อน',true);return;}
+
+ if(busy||!data)return;
+
+ const key={reports:'report_id',customer:'customer_id',customer_contact:'contact_id'}[type];
+
+ const row=data[type].find(r=>String(r[key])===String(id));if(!row)return note('ไม่พบรายการ กรุณาโหลดข้อมูลใหม่',true);
+
+ remember();
+
+ const team=type==='reports'?[...new Set(data.report_employee.filter(r=>String(r.report_id)===String(id)).map(r=>String(r.employee_id)))]:[];
+
+ const v={...row,employee_ids:team.slice()};
+
+ if(type==='reports'){v.visit_at=editDate(row.visit_at_th||row.visit_at,true);v.next_follow_up=editDate(row.next_follow_up,false);}
+
+ editing={type,id,origin:kind,original:{...row},team,values:v,token:token()};
+
+ kind=type==='reports'?'reports_add':type;
+
+ render();note('กำลังแก้ไขรายการเดิม · '+id);
+
+ $('record-form').scrollIntoView({behavior:'smooth',block:'start'});
+
+}
+
+function cancelEdit(){if(!editing)return;const origin=editing.origin;editing=null;kind=origin;render();note('');}
+
+/** ตัวอย่างแก้เฉพาะข้อมูลในหน่วยความจำ ไม่เขียนกลับ Google Sheets */
+
+function previewUpdate(type,id,p){
+
+ const key={reports:'report_id',customer:'customer_id',customer_contact:'contact_id'}[type];
+
+ const row=data[type].find(r=>String(r[key])===String(id));const {employee_ids,...fields}=p;
+
+ Object.assign(row,fields);
+
+ if(type==='reports'){
+
+   row.visit_at=p.visit_at.replace('T',' ');row.visit_at_th='';
+
+   data.report_employee=data.report_employee.filter(r=>String(r.report_id)!==String(id));
+
+   (employee_ids||[]).forEach((e,i)=>data.report_employee.push({report_id:id,employee_id:e,report_employee_id:'PREVIEW_'+id+'_'+i}));
+
+ }
+
+ window.GD_PREVIEW=data;return {id,updated:true};
+
+}
+
+
+function render(){
+
+ $('cancel-edit').classList.toggle('hidden',!editing);
+
+ const config={plans_view:['WORK PLANS','แผนการปฏิบัติงาน','รายการที่วางแผนไว้ แสดงเฉพาะสถานะ PLANNED','','','แผนการปฏิบัติงานทั้งหมด'],reports_view:['REPORTS','รายงานการปฏิบัติงาน','ดูข้อมูลรายงานการปฏิบัติงานที่บันทึกไว้ทั้งหมด','','','รายการรายงานทั้งหมด'],reports_add:['ADD REPORT','เพิ่มรายงานการปฏิบัติงาน','บันทึกงานให้ครบ เชื่อมข้อมูลลูกค้าและทีมงานในที่เดียว','รายละเอียดการปฏิบัติงาน','บันทึกรายงาน','รายงานที่เพิ่มล่าสุด'],customer_view:['CUSTOMERS','ข้อมูลลูกค้า','รายชื่อลูกค้าทั้งหมด พร้อมข้อมูลบริษัทและการติดต่อ','','','รายการลูกค้าทั้งหมด'],customer:['ADD CUSTOMER','เพิ่มข้อมูลลูกค้า','เริ่มต้นจากข้อมูลบริษัท เพื่อเชื่อมต่อผู้ติดต่อและรายงาน','รายละเอียดลูกค้า','บันทึกลูกค้า','ลูกค้าที่เพิ่มล่าสุด'],contacts_view:['CONTACTS','ผู้ติดต่อลูกค้า','รายชื่อผู้ติดต่อทั้งหมด เลือกกรองตามบริษัทลูกค้าได้','','','รายชื่อผู้ติดต่อทั้งหมด'],customer_contact:['ADD CONTACT','เพิ่มข้อมูลผู้ติดต่อลูกค้า','จัดเก็บผู้ติดต่อให้ถูกบริษัท ค้นหาและประสานงานได้ง่าย','รายละเอียดผู้ติดต่อ','บันทึกผู้ติดต่อ','ผู้ติดต่อที่เพิ่มล่าสุด']}[kind];
+
+ ['section-en','title','subtitle','form-title','save','recent-title'].forEach((id,i)=>$(id).textContent=config[i]);
+
+ document.querySelectorAll('nav button').forEach(b=>{b.classList.toggle('active',b.dataset.kind===kind);b.setAttribute('aria-current',b.dataset.kind===kind?'page':'false');});
+
+ const customers=option('','เลือกบริษัทลูกค้า')+opts(data.customer.filter(r=>isActive(r)||(editing&&String(r.customer_id)===String(editing.original.customer_id))),'customer_id',r=>r.company_name+(r.company_short_name?' · '+r.company_short_name:''));
+
+ const isReportView=(kind==='reports_view'||kind==='plans_view')||kind==='customer_view'||kind==='contacts_view';$('record-form').classList.toggle('hidden',isReportView);if(isReportView){renderTable();return;}let h='';
+
+ if(kind==='customer')h='<div class="section">01 / ข้อมูลบริษัท</div><div class="grid">'+input('company_name','ชื่อบริษัท','text',true,true,'เช่น บริษัท แกรนด์ ดิจิตอล จำกัด')+input('company_short_name','ชื่อย่อบริษัท')+select('customer_type','ประเภทลูกค้า',enumOpts(['CUSTOMER','PROSPECT']))+input('phone','โทรศัพท์บริษัท','tel')+input('province','จังหวัด')+textarea('address','ที่อยู่')+input('location_url','ลิงก์แผนที่','url',false,true,'https://maps.google.com/...')+select('status','สถานะ',enumOpts(['ACTIVE','INACTIVE']))+textarea('remark','หมายเหตุ')+'</div>';
+
+ if(kind==='customer_contact')h='<div class="section">01 / บริษัทต้นสังกัด</div><div class="grid">'+select('customer_id','บริษัทลูกค้า',customers)+'</div><hr class="divider"><div class="section">02 / ข้อมูลผู้ติดต่อ</div><div class="grid">'+input('ชื่อ','ชื่อ','text',true)+input('นามสกุล','นามสกุล')+input('ตำแหน่ง','ตำแหน่ง')+input('โทรศัพท์','โทรศัพท์','tel')+input('email','อีเมล','email',false,true,'name@company.com')+'</div>';
+
+ if(kind==='reports_add')h='<div class="section">01 / ลูกค้าและการเข้าปฏิบัติงาน</div><div class="grid">'+select('customer_id','บริษัทลูกค้า',customers)+select('contact_id','ผู้ติดต่อลูกค้า',option('','เลือกบริษัทก่อน'))+input('visit_at','วันที่และเวลาเข้าปฏิบัติงาน','datetime-local',true)+select('activity','ประเภทงาน',option('','เลือกประเภทงาน')+data.activities.map(v=>option(v,activityName(v))).join(''))+'</div><span class="hint">แสดงเฉพาะผู้ติดต่อของบริษัทที่เลือก · วันที่กรอกเป็น ค.ศ. เวลาไทย</span><hr class="divider"><div class="section">02 / รายละเอียดและผลการดำเนินงาน</div><div class="grid">'+textarea('job_detail','รายละเอียดการปฏิบัติงาน',true)+select('status','สถานะงาน',enumOpts(['PLANNED','IN_PROGRESS','COMPLETED','CANCELLED']))+input('next_follow_up','วันที่ติดตามครั้งถัดไป','date')+textarea('remark','หมายเหตุ')+input('attachment_url','ลิงก์เอกสารหรือรูปภาพ','url',false,true,'https://drive.google.com/...')+'</div><hr class="divider"><div class="section">03 / ทีมงานและผู้บันทึก</div><fieldset><legend>ผู้ปฏิบัติงาน * <span class="hint">เลือกได้มากกว่า 1 คน</span></legend><div class="team">'+data.employee.filter(r=>isActive(r)||(editing&&(editing.team.includes(String(r.employee_id))||String(r.employee_id)===String(editing.original.created_by)))).map(e=>'<label><input type="checkbox" name="employee_ids" value="'+esc(e.employee_id)+'">'+esc(empName(e))+'</label>').join('')+'</div></fieldset><div class="grid" style="margin-top:20px">'+select('created_by','ผู้บันทึก',option('','เลือกผู้บันทึก')+opts(data.employee.filter(r=>isActive(r)||(editing&&(editing.team.includes(String(r.employee_id))||String(r.employee_id)===String(editing.original.created_by)))),'employee_id',empName))+'</div><span class="hint">ผู้บันทึกเป็นพนักงานที่เลือกในฟอร์ม ไม่ใช่การยืนยันตัวตนด้วยบัญชี Google</span>';
+
+ $('form-body').innerHTML=h;requestToken=token();
+
+ if(kind==='reports_add'){$('f-contact_id').disabled=true;$('f-customer_id').addEventListener('change',()=>filterContacts());$('f-visit_at').addEventListener('change',()=>{$('f-next_follow_up').min=$('f-visit_at').value.slice(0,10);});}
+
+ applyDraft(editing?{values:editing.values,token:editing.token}:drafts[kind]);if(editing){$('title').textContent='แก้ไข'+({reports:'รายงานการปฏิบัติงาน',customer:'ข้อมูลลูกค้า',customer_contact:'ผู้ติดต่อลูกค้า'}[editing.type]);$('form-title').textContent='แก้ไขข้อมูลเดิม';$('save').textContent='บันทึกการแก้ไข';$('reset').classList.add('hidden');}else{$('reset').classList.remove('hidden');}$('fields').disabled=busy;$('save').disabled=busy;renderTable();
+
+}
+
+function filterContacts(selected=''){const customer=$('f-customer_id').value,contacts=data.customer_contact.filter(c=>c.customer_id===customer);$('f-contact_id').innerHTML=option('',!customer?'เลือกบริษัทก่อน':contacts.length?'เลือกผู้ติดต่อ':'ยังไม่มีผู้ติดต่อ — เพิ่มที่เมนูผู้ติดต่อ')+opts(contacts,'contact_id',r=>[r['ชื่อ'],r['นามสกุล'],r['ตำแหน่ง']].filter(Boolean).join(' · '));$('f-contact_id').disabled=!customer||!contacts.length;$('f-contact_id').value=selected;}
+
+
+// ============================================================================
+
+// ข้อมูลพนักงานของรายงาน
+
+// เชื่อม reports.report_id -> report_employee -> employee.employee_id
+
+// อ่านจากข้อมูล getBootstrap เดิมเท่านั้น ไม่เพิ่มหรือแก้ข้อมูลในชีต
+
+// ============================================================================
+
+
+/** ชื่อเต็มสำหรับอ่านรายงาน; หากไม่มีชื่อ ให้ใช้ชื่อย่อหรือรหัสตามลำดับ */
+
+
+// ชื่อที่อ่านเข้าใจใช้แสดงผลเท่านั้น: ค่า activity และ ID ที่บันทึกยังคงเดิม
+
+const activityLabels = {
+
+  'Site Survey': 'สำรวจหน้างาน', 'Installation': 'ติดตั้งอุปกรณ์',
+
+  'Visit': 'เข้าพบลูกค้า', 'Maintenance': 'บำรุงรักษา',
+
+  'Check Communication': 'ตรวจสอบการสื่อสาร', 'Meeting': 'ประชุม',
+
+  'Training': 'อบรมการใช้งาน', 'Follow Up': 'ติดตามงาน',
+
+  'Commissioning': 'ทดสอบและส่งมอบระบบ', 'Troubleshooting': 'ตรวจสอบและแก้ไขปัญหา'
+
+};
+
+function activityName(value) { return activityLabels[value] || value || 'ไม่ระบุประเภทงาน'; }
+
+
+/**
+
+ * รองรับทั้งวันที่ ISO จาก Apps Script และวันที่แบบไทยในข้อมูลเดิม
+
+ * แยกองค์ประกอบโดยตรง ไม่ใช้ Date.parse ที่อาจตีความวัน/เดือนหรือเขตเวลาผิด
+
+ * ปีไทยตั้งแต่ 2400 ขึ้นไปคงเดิม; ปี ค.ศ. แปลงเป็น พ.ศ. เฉพาะตอนแสดง
+
+ */
+
+function reportDate(value) {
+
+  const text = String(value || '').trim();
+
+  if (!text) return 'ยังไม่ระบุ';
+
+  const iso = text.match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2})(?::\d{2})?)?$/);
+
+  const thai = text.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})(?: (\d{1,2}):(\d{2})(?::\d{2})?)?$/);
+
+  if (!iso && !thai) return text;
+
+  const match = iso || thai;
+
+  const year = Number(iso ? match[1] : match[3]);
+
+  const month = Number(match[2]);
+
+  const day = Number(iso ? match[3] : match[1]);
+
+  const months = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+
+  if (month < 1 || month > 12 || day < 1 || day > 31) return text;
+
+  return day + ' ' + months[month - 1] + ' ' + (year >= 2400 ? year : year + 543) +
+
+    (match[4] ? ' เวลา ' + match[4].padStart(2, '0') + ':' + match[5] + ' น.' : '');
+
+}
+
+
+/** ชื่อลูกค้าและผู้ติดต่ออ้างอิงจากทะเบียน ไม่ใช้รหัสแทนชื่อโดยไม่มีคำอธิบาย */
+
+function reportCustomer(report) {
+
+  const customer = data.customer.find(c => String(c.customer_id) === String(report.customer_id));
+
+  const contact = data.customer_contact.find(c => String(c.contact_id) === String(report.contact_id));
+
+  const validContact = contact && String(contact.customer_id) === String(report.customer_id);
+
+  const name = customer ? (customer.company_name || customer.company_short_name || 'ยังไม่ระบุชื่อบริษัท') : 'ไม่พบข้อมูลลูกค้า';
+
+  return '<strong>' + esc(name) + '</strong>' +
+
+    (customer && customer.company_short_name && customer.company_short_name !== name
+
+      ? '<span class="hint">' + esc(customer.company_short_name) + '</span>' : '') +
+
+    '<span class="hint">ผู้ติดต่อ: ' + (validContact
+
+      ? esc([contact['ชื่อ'], contact['นามสกุล']].filter(Boolean).join(' ') || 'ยังไม่ระบุชื่อ')
+
+      : 'ไม่พบข้อมูลผู้ติดต่อที่ตรงกับบริษัท') + '</span>';
+
+}
+
+
+/** ข้อมูลที่สั้นมากแสดงตามจริง พร้อมแจ้งให้ผู้ใช้ตรวจทาน ไม่แต่งรายละเอียดแทน */
+
+function reportWork(report) {
+
+  const detail = String(report.job_detail || '').trim();
+
+  return '<strong class="report-work-title">' + esc(activityName(report.activity)) + '</strong>' +
+
+    '<div class="report-work-text">' + esc(detail || 'ยังไม่ได้ระบุรายละเอียดงาน') + '</div>' +
+
+    (detail && detail.length < 5 ? '<span class="hint data-gap">รายละเอียดงานสั้นมาก กรุณาตรวจสอบข้อมูลต้นทาง</span>' : '');
+
+}
+
+
+/** ลิงก์แนบอนุญาตเฉพาะ HTTP(S); ค่าที่ไม่ผ่านยังแสดงเป็นข้อความเพื่อเก็บข้อมูลครบ */
+
+function reportAttachment(value) {
+
+  if (!value) return 'ไม่มีเอกสารแนบ';
+
+  const url = String(value).trim();
+
+  return /^https?:\/\/[^\s]+$/i.test(url)
+
+    ? '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">เปิดเอกสารหรือรูปภาพแนบ</a>'
+
+    : '<span class="report-work-text">' + esc(value) + '</span>';
+
+}
+
+
+function employeeFullName(employee) {
+
+  return [employee['ชื่อ'], employee['นามสกุล']]
+
+    .filter(Boolean).join(' ').trim() || employee['ชื่อย่อ'] || employee.employee_id;
+
+}
+
+
+/**
+
+ * สร้างดัชนีครั้งเดียวต่อการวาดตาราง เพื่อไม่ต้องค้นทั้งตารางซ้ำทุกรายงาน
+
+ * ไม่กรอง ACTIVE เพราะพนักงานเดิมยังต้องปรากฏในประวัติการทำงาน
+
+ * Map และ Set ใช้รหัสเป็นข้อความ และตัดคู่รายงาน/พนักงานซ้ำเฉพาะตอนแสดงผล
+
+ */
+
+function reportEmployeeIndex() {
+
+  const employees = new Map((data.employee || []).map(e => [String(e.employee_id), e]));
+
+  const teams = new Map();
+
+
+  (data.report_employee || []).forEach(link => {
+
+    const reportId = String(link.report_id);
+
+    const employeeId = String(link.employee_id);
+
+    if (!teams.has(reportId)) teams.set(reportId, new Set());
+
+    teams.get(reportId).add(employeeId);
+
+  });
+
+
+  return { employees, teams };
+
+}
+
+
+/**
+
+ * แสดงพนักงานหนึ่งคนพร้อมรายละเอียดที่มีอยู่ในตาราง employee
+
+ * หากข้อมูลพนักงานถูกลบ ยังแสดงรหัสอ้างอิงเพื่อไม่ให้ประวัติหายเงียบ ๆ
+
+ * ทุกค่าจากชีตผ่าน esc ก่อนนำไปประกอบ HTML
+
+ */
+
+function reportEmployeeCard(employeeId, employees) {
+
+  const employee = employees.get(String(employeeId));
+
+  if (!employee) {
+
+    return '<li><strong>' + esc(employeeId || 'ไม่ระบุรหัส') + '</strong>' +
+
+      '<span class="hint">ไม่พบข้อมูลพนักงานในทะเบียน</span></li>';
+
+  }
+
+
+  return '<li><strong>' + esc(employeeFullName(employee)) + '</strong>' +
+
+    '<span class="hint">รหัส: ' + esc(employee.employee_id) +
+
+    ' · ชื่อย่อ: ' + esc(employee['ชื่อย่อ'] || '—') + '</span>' +
+
+    '<span class="hint">' + (!employee['ชื่อ'] && !employee['นามสกุล'] ? 'ยังไม่ระบุชื่อ–นามสกุลในทะเบียน<br>' : '') + 'ตำแหน่ง: ' + esc(employee['ตำแหน่ง'] || 'ยังไม่ระบุในทะเบียน') +
+
+    ' · สถานะพนักงาน: ' + esc(statusLabels[employee.status] || employee.status || 'ใช้งาน') +
+
+    '</span></li>';
+
+}
+
+
+/** รายละเอียดงานเป็นข้อมูลรวมของรายงาน ไม่ได้แยกหน้าที่รายบุคคล */
+
+function reportTeamDetails(report, index) {
+
+  const employeeIds = [...(index.teams.get(String(report.report_id)) || [])];
+
+  const names = employeeIds.map(id => {
+
+    const employee = index.employees.get(id);
+
+    return employee ? employeeFullName(employee) : id;
+
+  });
+
+
+  // รายชื่อย่อส่วนแรกช่วยให้เห็นทีมงานได้ทันทีโดยไม่ต้องเปิดรายละเอียด
+
+  const summary = employeeIds.length
+
+    ? '<strong>ผู้ปฏิบัติงาน ' + employeeIds.length + ' คน</strong>' +
+
+      '<div class="report-team-names">' + names.map(esc).join(' · ') + '</div>'
+
+    : '<span class="hint">ยังไม่มีข้อมูลผู้ปฏิบัติงาน</span>';
+
+
+  const team = employeeIds.length
+
+    ? '<ul class="report-employee-list">' + employeeIds.map(id =>
+
+        reportEmployeeCard(id, index.employees)).join('') + '</ul>'
+
+    : '<p class="hint">รายงานนี้ยังไม่มีข้อมูลเชื่อมกับผู้ปฏิบัติงาน</p>';
+
+
+  // ผู้บันทึกแยกจากผู้ปฏิบัติงาน: ไม่ถือว่าผู้บันทึกเป็นสมาชิกทีมโดยอัตโนมัติ
+
+  const recorder = report.created_by
+
+    ? '<ul class="report-employee-list">' +
+
+      reportEmployeeCard(report.created_by, index.employees) + '</ul>'
+
+    : '<p class="hint">ไม่ระบุผู้บันทึก</p>';
+
+
+  return '<div class="report-team">' + summary +
+
+    '<details class="report-details"><summary>ดูทีมงานและรายละเอียดงาน' +
+
+    '<span class="sr-only"> รายงาน ' + esc(report.report_id) + '</span></summary>' +
+
+    '<div class="report-detail-body">' +
+
+    '<h3>รหัสอ้างอิงรายงาน</h3><div class="report-reference">' + esc(report.report_id) + '</div>' +
+
+    '<h3>ประเภทงาน</h3><div>' + esc(activityName(report.activity)) + ' · ' + esc(report.activity) + '</div>' +
+
+    '<h3>ผู้ปฏิบัติงาน</h3>' + team +
+
+    '<h3>รายละเอียดงานของรายงานนี้</h3>' +
+
+    '<p class="hint">รายละเอียดงานรวมของทีมตามที่บันทึกในรายงาน</p>' +
+
+    '<div class="report-work-text">' + esc(report.job_detail || 'ยังไม่มีรายละเอียดงาน') + '</div>' +
+
+    '<h3>หมายเหตุ</h3><div class="report-work-text">' + esc(report.remark || '—') + '</div>' +
+
+    '<h3>วันที่ติดตามครั้งถัดไป</h3><div>' + esc(reportDate(report.next_follow_up)) + '</div>' +
+
+    '<h3>เอกสารหรือรูปภาพแนบ</h3><div>' + reportAttachment(report.attachment_url) + '</div>' +
+
+    '<h3>ผู้บันทึก</h3>' + recorder +
+
+    '<span class="hint">บันทึกเมื่อ: ' + esc(reportDate(report.created_at)) +
+
+    '<br>อัปเดตเมื่อ: ' + esc(reportDate(report.updated_at)) + '</span>' +
+
+    '</div></details></div>';
+
+}
+
+
+// สถานะตัวกรองแยกจาก draft ของฟอร์ม จึงคงตัวเลือกเมื่อสลับเมนูหรือโหลดข้อมูลใหม่
+
+const reportFilters = { employee: '', month: '' };
+
+
+/** ใช้ปี ค.ศ.-เดือนเป็น key เพื่อไม่รวมเดือนเดียวกันจากคนละปีเข้าด้วยกัน */
+
+function reportMonthKey(report) {
+
+  const value = String(report.visit_at_th || report.visit_at || '').trim();
+
+  const iso = value.match(/^(\d{4})-(\d{2})-\d{2}(?:[ T]|$)/);
+
+  const thai = value.match(/^\d{1,2}\/(\d{1,2})\/(\d{4})(?: |$)/);
+
+  if (!iso && !thai) return 'unknown';
+
+  let year = Number(iso ? iso[1] : thai[2]);
+
+  const month = Number(iso ? iso[2] : thai[1]);
+
+  if (month < 1 || month > 12) return 'unknown';
+
+  if (year >= 2400) year -= 543;
+
+  return year + '-' + String(month).padStart(2, '0');
+
+}
+
+
+function reportMonthLabel(key) {
+
+  if (key === 'unknown') return 'ไม่ระบุเดือน / วันที่ไม่สมบูรณ์';
+
+  const [year, month] = key.split('-').map(Number);
+
+  const months = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+
+  return months[month - 1] + ' ' + (year + 543);
+
+}
+
+
+/** พนักงานต้องอยู่ในทีมรายงานจริง ไม่ใช้ created_by แทนสมาชิกทีม */
+
+function filterReportRows(reports, index) {
+
+  return reports.filter(report => {
+
+    const team = index.teams.get(String(report.report_id));
+
+    const matchesEmployee = !reportFilters.employee ||
+
+      (reportFilters.employee === 'unassigned' ? !team || !team.size : !!team && team.has(reportFilters.employee));
+
+    return matchesEmployee && (!reportFilters.month || reportMonthKey(report) === reportFilters.month);
+
+  });
+
+}
+
+
+/** แผนงานใช้ข้อมูลรายงานเดิมและเลือกเฉพาะสถานะ PLANNED แบบตรงตัว */
+
+function reportSourceRows() {
+
+  return kind==='plans_view' ? data.reports.filter(report=>report.status==='PLANNED') : data.reports;
+
+}
+
+function renderReportFilters(index, count) {
+
+  $('report-filter-heading').textContent=kind==='plans_view'?'ค้นหาแผนการปฏิบัติงาน':'ค้นหารายงานการปฏิบัติงาน';
+
+  // มีพนักงานในทะเบียนทุกสถานะ และยังเลือกกรองรหัสที่ทะเบียนหายไปได้
+
+  const people = new Map(index.employees);
+
+  index.teams.forEach(team => team.forEach(id => {
+
+    if (!people.has(id)) people.set(id, { employee_id: id });
+
+  }));
+
+  $('filter-employee').innerHTML = option('', 'พนักงานทั้งหมด') +
+
+    [...people].map(([id, employee]) => option(id, employeeFullName(employee))).join('') +
+
+    option('unassigned', 'ยังไม่ระบุผู้ปฏิบัติงาน');
+
+  // เดือนสร้างจากวันที่ปฏิบัติงาน ไม่ใช่วันที่สร้างรายงาน
+
+  const months = [...new Set(reportSourceRows().map(reportMonthKey))].sort().reverse();
+
+  $('filter-month').innerHTML = option('', 'ทุกเดือน') + months.map(key => option(key, reportMonthLabel(key))).join('');
+
+  $('filter-employee').value = reportFilters.employee;
+
+  $('filter-month').value = reportFilters.month;
+
+  $('clear-report-filters').disabled = !reportFilters.employee && !reportFilters.month;
+
+  const employeeLabel = reportFilters.employee === 'unassigned' ? 'ยังไม่ระบุผู้ปฏิบัติงาน' :
+
+    reportFilters.employee ? employeeFullName(people.get(reportFilters.employee) || { employee_id: reportFilters.employee }) : 'พนักงานทั้งหมด';
+
+  $('filter-result').textContent = 'พบ ' + count + ' จาก ' + reportSourceRows().length + (kind==='plans_view' ? ' แผนงาน · ' : ' รายงาน · ') + employeeLabel +
+
+    ' · ' + (reportFilters.month ? reportMonthLabel(reportFilters.month) : 'ทุกเดือน');
+
+}
+
+
+/** แยกวันที่กับเวลาเป็นสองบรรทัดที่แน่นอน ไม่ให้คำว่าเวลาแตกตามพื้นที่ตาราง */
+
+function reportDateCell(report) {
+
+  const parts = reportDate(report.visit_at_th || report.visit_at).split(' เวลา ');
+
+  return '<span class="report-date">' + esc(parts[0]) + '</span>' +
+
+    (parts[1] ? '<span class="report-time">' + esc(parts[1]) + '</span>' : '');
+
+}
+
+
+/** แสดงครบทุกแถวและทุกข้อมูลของลูกค้า โดยจัดรหัสและชื่อย่อไว้ใต้ชื่อบริษัท */
+
+function customerTableRows() {
+
+  return data.customer.map(customer => [
+
+    '<strong>' + esc(customer.company_name || 'ยังไม่ระบุชื่อบริษัท') + '</strong>' +
+
+      '<span class="hint">ชื่อย่อ: ' + esc(customer.company_short_name || '—') + '</span>' +
+
+      '<span class="hint">รหัส: ' + esc(customer.customer_id) + '</span>',
+
+    esc(statusLabels[customer.customer_type] || customer.customer_type || '—'),
+
+    esc(customer.phone || '—'),
+
+    esc(customer.province || '—'),
+
+    '<div class="report-work-text">' + esc(customer.address || '—') + '</div>',
+
+    customer.location_url ? (/^https?:\/\/[^\s]+$/i.test(String(customer.location_url).trim())
+
+      ? '<a href="' + esc(String(customer.location_url).trim()) + '" target="_blank" rel="noopener noreferrer">เปิดแผนที่</a>'
+
+      : esc(customer.location_url)) : '—',
+
+    esc(statusLabels[customer.status] || customer.status || '—'),
+
+    '<div class="report-work-text">' + esc(customer.remark || '—') + '</div>'
+
+  ]);
+
+}
+
+
+// แยกตัวกรองรายชื่อผู้ติดต่อจากตัวกรองรายงานและค่าฟอร์มเพิ่มผู้ติดต่อ
+
+let contactCustomerFilter='';
+
+function filteredContacts(){
+
+  return data.customer_contact.filter(c=>!contactCustomerFilter||String(c.customer_id)===contactCustomerFilter);
+
+}
+
+function renderContactFilters(count){
+
+  const companies=new Map(data.customer.map(c=>[String(c.customer_id),c.company_name||c.company_short_name||'ยังไม่ระบุชื่อบริษัท']));
+
+  // ผู้ติดต่อที่อ้างอิงบริษัทซึ่งหายไปยังแสดงและกรองได้ ไม่ซ่อนข้อมูลทิ้ง
+
+  data.customer_contact.forEach(c=>{const id=String(c.customer_id);if(!companies.has(id))companies.set(id,'ไม่พบข้อมูลบริษัท ('+id+')');});
+
+  $('filter-contact-customer').innerHTML=option('','ลูกค้าทั้งหมด')+[...companies].map(([id,name])=>option(id,name)).join('');
+
+  $('filter-contact-customer').value=contactCustomerFilter;
+
+  $('clear-contact-filter').disabled=!contactCustomerFilter;
+
+  $('contact-filter-result').textContent='พบ '+count+' จาก '+data.customer_contact.length+' ผู้ติดต่อ · '+(contactCustomerFilter?companies.get(contactCustomerFilter):'ลูกค้าทั้งหมด');
+
+}
+
+function contactTableRows(contacts){
+
+  const companies=new Map(data.customer.map(c=>[String(c.customer_id),c]));
+
+  return contacts.map(c=>{
+
+    const company=companies.get(String(c.customer_id));
+
+    return [
+
+      '<strong>'+esc([c['ชื่อ'],c['นามสกุล']].filter(Boolean).join(' ')||'ยังไม่ระบุชื่อ')+'</strong><span class="hint">รหัส: '+esc(c.contact_id)+'</span>',
+
+      company?'<strong>'+esc(company.company_name||company.company_short_name||'ยังไม่ระบุชื่อบริษัท')+'</strong><span class="hint">'+esc(company.company_short_name||'')+'</span>':'ไม่พบข้อมูลบริษัท<span class="hint">รหัส: '+esc(c.customer_id)+'</span>',
+
+      esc(c['ตำแหน่ง']||'—'),esc(c['โทรศัพท์']||'—'),esc(c.email||'—')
+
+    ];
+
+  });
+
+}
+
+function renderTable(){
+
+ $('contact-filters').classList.toggle('hidden',kind!=='contacts_view');
+
+ $('record-table').classList.toggle('contact-table',kind==='contacts_view');
+
+ $('record-table').classList.toggle('customer-table',kind==='customer_view');
+
+ if(kind==='customer_view')$('recent-title').textContent='รายการลูกค้าทั้งหมด ('+data.customer.length+' ราย)';
+
+ $('record-table').classList.toggle('report-table',(kind==='reports_view'||kind==='plans_view')||kind==='reports_add');
+
+ $('report-filters').classList.toggle('hidden',kind!=='reports_view'&&kind!=='plans_view');
+
+ const names=Object.fromEntries(data.customer.map(c=>[c.customer_id,c.company_short_name||c.company_name]));let heads,rows;
+
+
+ // ใช้ประเภทงานและรายละเอียดเป็นข้อมูลหลัก รหัสจริงยังอยู่ในส่วนเปิดดูรายละเอียด
+
+ if((kind==='reports_view'||kind==='plans_view')||kind==='reports_add'){
+
+   heads=['วันที่','ลูกค้า','งานที่ปฏิบัติ','สถานะ','ผู้ปฏิบัติงาน','หมายเหตุ (remark)'];
+
+   const employeeIndex=reportEmployeeIndex();
+
+   const reports=(kind==='reports_view'||kind==='plans_view')?filterReportRows(reportSourceRows(),employeeIndex).slice().reverse():data.reports.slice(-5).reverse();
+
+   if((kind==='reports_view'||kind==='plans_view'))renderReportFilters(employeeIndex,reports.length);
+
+   rows=reports.map(r=>[
+
+     reportDateCell(r),
+
+     reportCustomer(r),
+
+     reportWork(r)+editButton('reports',r.report_id),
+
+     '<span class="badge '+(r.status==='COMPLETED'?'':'progress')+'">'+esc(statusLabels[r.status]||r.status)+'</span>',
+
+     reportTeamDetails(r,employeeIndex),
+
+     esc(r.remark || '—')
+
+   ]);
+
+ }
+
+ else if(kind==='customer_view'){heads=['บริษัท / ชื่อย่อ','ประเภท','โทรศัพท์','จังหวัด','ที่อยู่','แผนที่','สถานะ','หมายเหตุ'];rows=customerTableRows().map((row,i)=>{row[0]+=editButton('customer',data.customer[i].customer_id);return row;});}
+
+ else if(kind==='customer'){heads=['บริษัท','ประเภท','สถานะ'];rows=data.customer.slice(-5).reverse().map(r=>[esc(r.company_name),esc(statusLabels[r.customer_type]||r.customer_type),esc(statusLabels[r.status]||r.status)]);}
+
+ else if(kind==='contacts_view'){heads=['ชื่อ–นามสกุล','บริษัทลูกค้า','ตำแหน่ง','โทรศัพท์','อีเมล'];const contacts=filteredContacts();rows=contactTableRows(contacts).map((row,i)=>{row[0]+=editButton('customer_contact',contacts[i].contact_id);return row;});renderContactFilters(contacts.length);}
+
+ else{heads=['ผู้ติดต่อ','บริษัท','โทรศัพท์'];rows=data.customer_contact.slice(-5).reverse().map(r=>[esc(r['ชื่อ']+' '+r['นามสกุล']),esc(names[r.customer_id]||r.customer_id),esc(r['โทรศัพท์']||'—')]);}
+
+ $('table-head').innerHTML='<tr>'+heads.map(h=>'<th>'+h+'</th>').join('')+'</tr>';$('table-body').innerHTML=rows.length?rows.map(r=>'<tr>'+r.map((c,i)=>'<td data-label="'+esc(heads[i])+'"><div class="cell-content">'+c+'</div></td>').join('')+'</tr>').join(''):'<tr><td colspan="'+heads.length+'">'+((kind==='reports_view'||kind==='plans_view')?'ไม่พบรายงานที่ตรงกับตัวกรอง ลองเปลี่ยนพนักงานหรือเดือน หรือกดล้างตัวกรอง':kind==='contacts_view'?'ไม่พบผู้ติดต่อของบริษัทที่เลือก ลองเปลี่ยนบริษัทหรือกดล้างตัวกรอง':'ยังไม่มีข้อมูล')+'</td></tr>';
+
+}
+
+function setBusy(v){busy=v;$('fields').disabled=v;$('save').disabled=v;$('refresh').disabled=v;$('reset').disabled=v;document.querySelectorAll('nav button').forEach(b=>b.disabled=v);}
+
+async function load(preserve=false){if(preserve)remember();setBusy(true);try{data=await call('getBootstrap');setBusy(false);render();note('');}catch(e){setBusy(false);$('save').disabled=!data;$('fields').disabled=!data;note('โหลดข้อมูลไม่สำเร็จ: '+e.message,true);}}
+
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{if(busy||!data||kind===b.dataset.kind)return;if(editing){note('กรุณาบันทึกหรือยกเลิกการแก้ไขก่อนเปลี่ยนเมนู',true);return;}remember();kind=b.dataset.kind;render();note('');document.querySelector('aside').classList.remove('menu-open');$('mobile-menu-toggle').setAttribute('aria-expanded','false');}));
+
+$('refresh').addEventListener('click',()=>load(true));$('reset').addEventListener('click',()=>{if(!data)return;if(confirm('ล้างข้อมูลที่กรอกในแบบฟอร์มนี้?')){delete drafts[kind];render();note('');}});
+
+$('record-form').addEventListener('submit',async e=>{e.preventDefault();if(busy||!data)return;const p=values(),saveKind=kind==='reports_add'?'reports':kind;if(kind==='reports_add'){if(!p.contact_id)return note('กรุณาเพิ่มหรือเลือกผู้ติดต่อของบริษัทนี้',true);if(!p.employee_ids.length)return note('กรุณาเลือกผู้ปฏิบัติงานอย่างน้อย 1 คน',true);if(p.next_follow_up&&p.next_follow_up<p.visit_at.slice(0,10))return note('วันติดตามต้องไม่ก่อนวันปฏิบัติงาน',true);}setBusy(true);$('save').textContent='กำลังบันทึก…';note('');let saved;try{saved=editing?(preview?previewUpdate(editing.type,editing.id,p):await call('updateRecord',editing.type,editing.id,p,editing.original,editing.team)):await call('saveRecord',saveKind,p,requestToken);}catch(err){setBusy(false);$('save').textContent='ลองบันทึกอีกครั้ง';note('บันทึกไม่สำเร็จ: '+err.message,true);return;}const editOrigin=editing&&editing.origin;if(!editing)delete drafts[kind];editing=null;requestToken=token();let refreshed=true;try{data=await call('getBootstrap');}catch(err){refreshed=false;}setBusy(false);kind=editOrigin||(kind==='reports_add'?'reports_view':kind==='customer'?'customer_view':kind==='customer_contact'?'contacts_view':kind);render();note(preview?'ทดสอบแบบฟอร์มสำเร็จ — ไม่มีข้อมูลถูกบันทึกลงชีต':'บันทึกสำเร็จ'+(saved.duplicate?' (คำขอนี้ถูกบันทึกไว้แล้ว)':'')+' · '+saved.id+(refreshed?'':' · รายการยังไม่อัปเดต กรุณากดโหลดข้อมูลใหม่'));});
+
+
+$('filter-employee').addEventListener('change', e => { reportFilters.employee = e.target.value; renderTable(); });
+
+$('filter-month').addEventListener('change', e => { reportFilters.month = e.target.value; renderTable(); });
+
+$('clear-report-filters').addEventListener('click', () => { reportFilters.employee = ''; reportFilters.month = ''; renderTable(); });
+
+$('filter-contact-customer').addEventListener('change',e=>{contactCustomerFilter=e.target.value;renderTable();});
+
+$('clear-contact-filter').addEventListener('click',()=>{contactCustomerFilter='';renderTable();});
+
+$('mobile-menu-toggle').addEventListener('click',()=>{
+
+ const open=document.querySelector('aside').classList.toggle('menu-open');
+
+ $('mobile-menu-toggle').setAttribute('aria-expanded',String(open));
+
+});
+
+$('cancel-edit').addEventListener('click',()=>{if(!busy)cancelEdit();});
+
+$('table-body').addEventListener('click',e=>{const button=e.target.closest('[data-edit-kind]');if(button)startEdit(button.dataset.editKind,button.dataset.editId);});
+
+if(preview)$('preview').classList.remove('hidden');load();
+
+</script></body></html>
